@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SlideMenu</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="title">左右滑动菜单</string>
+    <string name="img_desc"></string>
+    
+    <string name="left_title">其它</string>
+    <string name="right_title">设置</string>
+    <string name="leftNav">左侧导航</string>
+    <string name="rightNav">右侧导航</string>
+
+</resources>

@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <!-- 主布局 -->
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:padding="5dip" >
+
+            <ImageView
+                android:id="@+id/ivMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:contentDescription="@string/img_desc"
+                android:src="@drawable/nav_more_normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/title"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/ivSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:contentDescription="@string/img_desc"
+                android:src="@drawable/nav_setting_normal" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/titlebar"
+            android:contentDescription="@string/img_desc"
+            android:scaleType="fitXY"
+            android:src="@drawable/picture" />
+    </RelativeLayout>
+
+    <!-- 左侧菜单导航 -->
+
+    <RelativeLayout
+        android:id="@+id/leftLayout"
+        android:layout_width="140dip"
+        android:layout_height="match_parent"
+        android:background="#000000" >
+
+        <RelativeLayout
+            android:id="@+id/leftTitlebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey21"
+            android:padding="5dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:text="@string/leftNav"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <com.chris.lr.slidemenu.LayoutRelative
+            android:id="@+id/layoutSlideMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/leftTitlebar" >
+
+            <ListView
+                android:id="@+id/listMore"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000" />
+        </com.chris.lr.slidemenu.LayoutRelative>
+    </RelativeLayout>
+
+    <!-- 右侧菜单导航 -->
+
+    <RelativeLayout
+        android:id="@+id/rightLayout"
+        android:layout_width="140dip"
+        android:layout_height="match_parent"
+        android:background="#000000" >
+
+        <RelativeLayout
+            android:id="@+id/rightTitlebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gold"
+            android:padding="5dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:text="@string/right_title"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:layout_below="@id/rightTitlebar"
+            android:background="#000000"
+            android:text="@string/rightNav"
+            android:textColor="#ff00ff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>
